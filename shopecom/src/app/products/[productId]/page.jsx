@@ -5,7 +5,7 @@ const ProductDetails = async ({ params }) => {
 
   return (
     <div>
-      <h1>Product Details for {productId}</h1>
+      <h2>Product Details for {productId}</h2>
       <p>Details about the product will go here.</p>
     </div>
   );
