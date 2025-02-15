@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: {
     default: "Shopecom",
@@ -16,7 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <header style={{ padding: "1rem", backgroundColor: "#f0f0f0" }}>
-          <h1>Welcome to Shopecom page header</h1>
+          <h1>
+            Welcome to <Link href="/"> Shopecom</Link> page header
+          </h1>
         </header>
         {children}
         <footer style={{ padding: "1rem", backgroundColor: "yellow" }}>
