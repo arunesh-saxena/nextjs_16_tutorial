@@ -1,7 +1,11 @@
+import { notFound } from 'next/navigation';
 import React from 'react';
 
 const ReviewPage = async({params}) => {
     const { productId, reviewId } = await params;
+    if(reviewId > 100) {
+        notFound();
+    }
 
     return (
         <div>
