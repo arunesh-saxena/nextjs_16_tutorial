@@ -13,7 +13,7 @@ const navList =[
   
   { href: "/login", label: "Login" },
   { href: "/articles/breaking-news-123?lang=en", label: "Article in English" },
-  { href: "/articles/breaking-news-123?lang=fr", label: "Article in French" },
+  { href: "/order-product", label: "Order Product" },
 
 ];
 
