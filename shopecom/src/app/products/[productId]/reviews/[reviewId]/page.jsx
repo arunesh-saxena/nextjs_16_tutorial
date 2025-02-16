@@ -21,6 +21,7 @@ const ReviewPage = async ({ params }) => {
     <div>
       <h1>Review for Product {productId}</h1>
       <p>Review ID: {reviewId}</p>
+      <p>Random num: {randomNum}</p>
     </div>
   );
 };
