@@ -12,6 +12,9 @@ const navList =[
   { href: "/profile", label: "Profile" },
   
   { href: "/login", label: "Login" },
+  { href: "/articles/breaking-news-123?lang=en", label: "Article in English" },
+  { href: "/articles/breaking-news-123?lang=fr", label: "Article in French" },
+
 ];
 
 export default function Home() {
