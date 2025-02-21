@@ -1,7 +1,16 @@
+'use client';
 import React from 'react';
+import LoginPage from './@login/page';
 
-const ComplexDashboardLayout = ({ children, revenue, notifications, users }) => {
-    return (
+const ComplexDashboardLayout = ({ children, revenue, notifications, users, login }) => {
+    const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+    const loginHandler = () => {
+        console.log('loginHandler');
+        setIsLoggedIn(true);
+    };
+
+    // const isLoggedIn = false;
+    return isLoggedIn ? (
         <div>
             <main>
                 {children}
@@ -16,9 +25,11 @@ const ComplexDashboardLayout = ({ children, revenue, notifications, users }) => 
                     {notifications}
                 </div>
             </div>
-
-
-
+        </div>
+    ) : (
+        <div>
+            {login}
+            {/* <LoginPage loginHandler={loginHandler} /> */}
         </div>
     );
 };
