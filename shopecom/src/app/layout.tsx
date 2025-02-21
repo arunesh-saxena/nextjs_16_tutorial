@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { ErrorWrapper } from './error-wrapper';
+
 export const metadata = {
   title: {
     default: "Shopecom",
@@ -22,7 +24,10 @@ export default function RootLayout({
             Welcome to <Link href="/"> Shopecom</Link> page header
           </h1>
         </header>
-        {children}
+        <ErrorWrapper>
+
+          {children}
+        </ErrorWrapper>
         <footer style={{ padding: "1rem", backgroundColor: "yellow" }}>
           <p>&copy; 2023 Shopecom. All rights reserved. Footer</p>
         </footer>
