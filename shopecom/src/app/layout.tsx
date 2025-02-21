@@ -24,10 +24,10 @@ export default function RootLayout({
             Welcome to <Link href="/"> Shopecom</Link> page header
           </h1>
         </header>
-        <ErrorWrapper>
+        {/* <ErrorWrapper> */}
 
           {children}
-        </ErrorWrapper>
+        {/* </ErrorWrapper> */}
         <footer style={{ padding: "1rem", backgroundColor: "yellow" }}>
           <p>&copy; 2023 Shopecom. All rights reserved. Footer</p>
         </footer>

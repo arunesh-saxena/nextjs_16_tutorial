@@ -1,4 +1,4 @@
-import LineChart from '../_component/lineChart.jsx';
+import LineChart from '../_components/lineChart.jsx';
 
 
 
