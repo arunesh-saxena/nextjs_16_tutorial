@@ -15,6 +15,7 @@ const navList =[
   { href: "/articles/breaking-news-123?lang=en", label: "Article in English" },
   { href: "/order-product", label: "Order Product" },
   {href: "/complex-dashboard", label: "Complex Dashboard"},
+  {href: "/f1", label: "F 1"},
 
 ];
 
