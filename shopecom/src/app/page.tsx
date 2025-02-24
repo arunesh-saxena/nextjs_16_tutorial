@@ -14,8 +14,9 @@ const navList =[
   { href: "/login", label: "Login" },
   { href: "/articles/breaking-news-123?lang=en", label: "Article in English" },
   { href: "/order-product", label: "Order Product" },
-  {href: "/complex-dashboard", label: "Complex Dashboard"},
-  {href: "/f1", label: "F 1"},
+  {href: "/complex-dashboard", label: "Complex Dashboard (slot parallel rout"},
+  {href: "/f1", label: "F 1 (Intercepting Route)"},
+  {href: "/photo-feed", label: "photo-feed (Parallel Intercepting Routes)"},
 
 ];
 
