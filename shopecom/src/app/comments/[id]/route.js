@@ -21,6 +21,25 @@ export async function PATCH(request, { params }) {
     return Response.json(updatedComment);
 }
 
+export async function DELETE(request, { params }) {
+    const { id } = await params;
+
+    // Delete the comment from your data source using the id
+    const deletedComment = await deleteCommentById(id);
+
+    return Response.json(deletedComment);
+}
+
+async function deleteCommentById(id) {
+    const commentIndex = comments.findIndex(comment => comment.id === parseInt(id));
+    if (commentIndex === -1) {
+        throw new Error('Comment not found');
+    }
+
+    const deletedComment = comments.splice(commentIndex, 1)[0];
+    return deletedComment;
+}
+
 async function updateCommentById(id, updatedData) {
     const commentIndex = comments.findIndex(comment => comment.id === parseInt(id));
     if (commentIndex === -1) {
