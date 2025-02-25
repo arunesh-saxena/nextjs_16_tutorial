@@ -9,8 +9,30 @@ export async function GET(request, { params }) {
     return Response.json(comment);
 }
 
+export async function PATCH(request, { params }) {
+    const { id } = await params;
+
+    const body = await request.json();
+    const {text} = body;
+
+    // Update the comment in your data source using the id and updatedData
+    const updatedComment = await updateCommentById(id, text);
+
+    return Response.json(updatedComment);
+}
+
+async function updateCommentById(id, updatedData) {
+    const commentIndex = comments.findIndex(comment => comment.id === parseInt(id));
+    if (commentIndex === -1) {
+        throw new Error('Comment not found');
+    }
+
+    comments[commentIndex].text = updatedData;
+    return comments[commentIndex];
+}
+
 async function fetchCommentById(id) {
-    
+
 
     return comments.find(comment => comment.id === parseInt(id));
 }
