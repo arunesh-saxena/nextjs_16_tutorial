@@ -2,11 +2,11 @@
 import React from 'react';
 import Card from '@/app/_components/card';
 
-const LoginPage = ({ loginHandler, ...props }) => {
-    console.log(props)
+const LoginPage = () => {
+    // console.log(props)
     const onSubmit = (e) => {
         e.preventDefault();
-        loginHandler?.();
+        // loginHandler?.();
         console.log('Form submitted');
     }
     return (
