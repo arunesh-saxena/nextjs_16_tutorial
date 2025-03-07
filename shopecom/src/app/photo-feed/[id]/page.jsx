@@ -1,6 +1,10 @@
 import Image from "next/image";
 import wondersImages from "../wonders";
 
+export async function generateStaticParams() {
+  return [{id:'1' },{id:'2' }]
+}
+
 export default async function PhotoPage({
   params,
 }) {
