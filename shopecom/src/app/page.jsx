@@ -17,6 +17,8 @@ const navList =[
   {href: "/complex-dashboard", label: "Complex Dashboard (slot parallel rout"},
   {href: "/f1", label: "F 1 (Intercepting Route)"},
   {href: "/photo-feed", label: "photo-feed (Parallel Intercepting Routes)"},
+  {href: "/client-route", label: "Client Route"},
+  {href: "/server-route", label: "Server route"},
 
 ];
 
