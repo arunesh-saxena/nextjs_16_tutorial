@@ -1,6 +1,8 @@
 import Image from "next/image";
 import wondersImages from "../wonders";
 
+// export const dynamicParams = false;
+
 export async function generateStaticParams() {
   return [{id:'1' },{id:'2' }]
 }
