@@ -19,6 +19,7 @@ const navList =[
   {href: "/photo-feed", label: "photo-feed (Parallel Intercepting Routes)"},
   {href: "/client-route", label: "Client Route"},
   {href: "/server-route", label: "Server route"},
+  {href: "/users-client", label: "Users client"},
 
 ];
 
