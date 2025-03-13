@@ -20,6 +20,7 @@ const navList =[
   {href: "/client-route", label: "Client Route"},
   {href: "/server-route", label: "Server route"},
   {href: "/users-client", label: "Users client"},
+  {href: "/users-server", label: "Users server"},
 
 ];
 
