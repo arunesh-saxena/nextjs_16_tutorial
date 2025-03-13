@@ -21,7 +21,8 @@ const navList =[
   {href: "/server-route", label: "Server route"},
   {href: "/users-client", label: "Users client"},
   {href: "/users-server", label: "Users server"},
-  {href: "/posts\-sequential", label: "Posts Sequential Page"},
+  {href: "/posts-sequential", label: "Posts Sequential Page"},
+  {href: "/user-parallel/1", label: "user-parallel/1 Page"},
 
 ];
 
