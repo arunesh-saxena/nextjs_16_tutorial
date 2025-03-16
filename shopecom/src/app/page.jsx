@@ -23,7 +23,9 @@ const navList =[
   {href: "/users-server", label: "Users server"},
   {href: "/posts-sequential", label: "Posts Sequential Page"},
   {href: "/user-parallel/1", label: "user-parallel/1 Page"},
+
   {href: "/products-db", label: "Products DB Page"},
+  {href: "/react-form", label: "React Form Page"},
 
 ];
 

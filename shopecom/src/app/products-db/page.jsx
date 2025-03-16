@@ -6,13 +6,18 @@ const ProductsDBPage = async () => {
     return (
         <div>
             <h1>Product Detail Page</h1>
-            {products.map((product) => (
-                <div key={product.id}>
-                    <h2>{product.title}</h2>
-                    <p>{product.description}</p>
-                    <p>${product.price}</p>
-                </div>
-            ))} 
+            <ul className="space-y-4 p-4">
+                {products.map((product) => (
+                    <li
+                        key={product.id}
+                        className="p-4 bg-white shadow-md rounded-lg text-gray-700"
+                    >
+                        <h2 className="text-xl font-semibold">{product.title}</h2>
+                        <p>{product.description}</p>
+                        <p className="text-lg font-medium">${product.price}</p>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };
