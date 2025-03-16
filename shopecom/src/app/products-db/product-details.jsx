@@ -4,6 +4,7 @@ import { useOptimistic } from "react";
 import { removeProduct } from "@/app/actions/products";
 import Link from "next/link";
 import Form from "next/form";
+import { revalidatePath } from "next/cache";
 
  const ProductDetail = ({ products }) => {
   const [optimisticProducts, setOptimisticProducts] = useOptimistic(
@@ -16,6 +17,7 @@ import Form from "next/form";
   const removeProductById = async (productId) => {
     setOptimisticProducts(productId);
     await removeProduct(productId);
+    // revalidatePath("/products-db");
   };
 
   return (
