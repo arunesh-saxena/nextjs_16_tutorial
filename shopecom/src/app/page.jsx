@@ -26,6 +26,7 @@ const navList =[
 
   {href: "/products-db", label: "Products DB Page"},
   {href: "/react-form", label: "React Form Page"},
+  {href: "/products-db-create", label: "Products DB Create Page"},
 
 ];
 
