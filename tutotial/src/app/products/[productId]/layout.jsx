@@ -9,7 +9,7 @@ const ProductLayout = ({ children }) => {
       </header>
       <main>{children}</main>
       <footer>
-        <p>© 2023 Shopecom Footer</p>
+        <p>© 2023 Nextjs 15 tutorial Footer</p>
       </footer>
     </div>
   );

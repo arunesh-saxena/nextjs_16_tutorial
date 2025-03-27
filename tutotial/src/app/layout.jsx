@@ -5,11 +5,11 @@ import { ErrorWrapper } from './error-wrapper';
 
 export const metadata = {
   title: {
-    default: "Shopecom",
-    template: "%s  Shopecom",
+    default: "NestJs 15",
+    template: "%s  NestJs 15",
     absolute: "",
   },
-  description: "Shopecom | One point Store for all your needs",
+  description: "NestJs 15 | One point Store for all your needs",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
       <body>
         <header style={{ padding: "1rem", backgroundColor: "#f0f0f0" }}>
           <h1>
-            Welcome to <Link href="/"> Shopecom</Link> page header
+            Welcome to <Link href="/"> NestJs 1 Tutorial</Link> page header
           </h1>
         </header>
         {/* <ErrorWrapper> */}
@@ -28,7 +28,7 @@ export default function RootLayout({
           {children}
         {/* </ErrorWrapper> */}
         <footer style={{ padding: "1rem", backgroundColor: "yellow" }}>
-          <p>&copy; 2023 Shopecom. All rights reserved. Footer</p>
+          <p>&copy; 2023 Nextjs 15 tutorial. All rights reserved. Footer</p>
         </footer>
       </body>
     </html>

@@ -40,7 +40,7 @@ const AuthLayout = ({ children }) => {
       })}
       <main>{children}</main>
       <footer>
-        <p>&copy; 2023 Shopecom footer</p>
+        <p>&copy; 2023 nextjs-15_tutolial footer</p>
       </footer>
     </div>
   );
