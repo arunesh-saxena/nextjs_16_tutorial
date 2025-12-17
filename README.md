@@ -1,45 +1,95 @@
-# nextjs 15 tutorial
- this include the basic tutorial for next js
+# Nextjs 15 Tutorial
 
-# tutorial 
-    https://www.youtube.com/watch?v=b4ba60j_4o8&list=PLC3y8-rFHvwhIEc4I4YsRz5C7GOBnxSJY
-    
-    This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Minimal Next.js "app" directory tutorial project. Includes TypeScript, Tailwind CSS, and Prisma examples used for learning and demos.
 
-## Getting Started
+## Contents
 
-First, run the development server:
+- src/app — Next.js app directory (main page: src/app/page.jsx)
+- src/app/globals.css — global styles (Tailwind)
+- src/app/page.module.css — component styles
+- prisma/schema.prisma — Prisma schema
+- package.json — useful scripts
 
-```bash
-npm run dev
+## Prerequisites
+
+- Node.js 18+
+- npm, pnpm, or yarn
+- (optional) a database for Prisma (SQLite recommended for local dev)
+
+## Install
+
+Open a terminal in the project root (Windows PowerShell):
+
+```powershell
+npm install
 # or
-yarn dev
+pnpm install
+# or
+yarn install
+```
+
+## Development
+
+Start the Next.js dev server:
+
+```powershell
+npm run dev
 # or
 pnpm dev
 # or
-bun dev
+yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edit pages under src/app — changes reload automatically.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## TypeScript & Tailwind
 
-## Learn More
+- TypeScript: check tsconfig.json. Rename .jsx/.js to .tsx/.ts to opt in.
+- Tailwind configured via tailwind.config.js and src/app/globals.css.
 
-To learn more about Next.js, take a look at the following resources:
+## Prisma — setup and start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create a .env in the project root with DATABASE_URL. Example for SQLite:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+DATABASE_URL="file:./dev.db"
 
-## Deploy on Vercel
+2. Run migrations and open Prisma Studio:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```powershell
+npx prisma migrate dev --name init
+npx prisma studio
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Optional convenience npm script (add to package.json "scripts"):
 
-## run dev
-> npx prisma migrate dev --name init
+```json
+"prisma:start": "npx prisma migrate dev --name init && npx prisma studio"
+```
+
+Then run:
+
+```powershell
+npm run prisma:start
+```
+
+Notes:
+- For Postgres/MySQL set DATABASE_URL before running migrations.
+- migrate dev will create/apply migrations and create the DB for SQLite.
+
+## Useful scripts
+
+- npm run dev — start dev server
+- npm run build — build for production
+- npm start — run built app
+- npm run prisma:start — run migrations and open Prisma Studio (if added)
+
+## Deploy
+
+See Next.js docs for deployment instructions: https://nextjs.org/docs/deployment
+
+## Resources
+
+- Next.js: https://nextjs.org/docs
+- Prisma: https://www.prisma.io/docs
