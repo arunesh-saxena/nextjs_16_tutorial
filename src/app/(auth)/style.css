@@ -1,3 +1,120 @@
 .active {
     font-weight: bold;
 }
+/* ...existing code... */
+
+/* Tabs styling */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.tabItem {
+  margin: 0;
+}
+
+.tab {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  color: #0b3d91;
+  text-decoration: none;
+  border-radius: 6px 6px 0 0;
+  background: transparent;
+  transition: background-color 120ms ease, box-shadow 120ms ease;
+  font-weight: 500;
+}
+
+.tab:hover,
+.tab:focus {
+  background: rgba(11,61,145,0.06);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(11,61,145,0.08);
+}
+
+.tabItem.active .tab {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-bottom-color: transparent;
+  box-shadow: 0 -2px 0 0 rgba(11,61,145,0.06) inset;
+}
+
+/* Focus ring for keyboard users */
+.tab:focus-visible {
+  outline: 3px solid rgba(11,61,145,0.12);
+  outline-offset: 2px;
+}
+
+/* Utility: visually-hidden (if not already defined) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* ...existing code... */
+```/* filepath: d:\dev\nextjs_15_tutorial\src\app\(auth)\style.css */
+/* ...existing code... */
+
+/* Tabs styling */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.tabItem {
+  margin: 0;
+}
+
+.tab {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  color: #0b3d91;
+  text-decoration: none;
+  border-radius: 6px 6px 0 0;
+  background: transparent;
+  transition: background-color 120ms ease, box-shadow 120ms ease;
+  font-weight: 500;
+}
+
+.tab:hover,
+.tab:focus {
+  background: rgba(11,61,145,0.06);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(11,61,145,0.08);
+}
+
+.tabItem.active .tab {
+  background: white;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-bottom-color: transparent;
+  box-shadow: 0 -2px 0 0 rgba(11,61,145,0.06) inset;
+}
+
+/* Focus ring for keyboard users */
+.tab:focus-visible {
+  outline: 3px solid rgba(11,61,145,0.12);
+  outline-offset: 2px;
+}
+
+/* Utility: visually-hidden (if not already defined) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* ...existing code... */
