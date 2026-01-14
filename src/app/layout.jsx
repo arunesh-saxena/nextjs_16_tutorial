@@ -5,11 +5,11 @@ import { ErrorWrapper } from './error-wrapper';
 
 export const metadata = {
   title: {
-    default: "NestJs 15",
-    template: "%s  NestJs 15",
+    default: "NestJs 16",
+    template: "%s  NestJs 16",
     absolute: "",
   },
-  description: "NestJs 15 | One point Store for all your needs",
+  description: "NestJs 16 | One point Store for all your needs",
 };
 
 export default function RootLayout({
@@ -21,7 +21,7 @@ export default function RootLayout({
         <header className="bg-white border-b border-slate-200">
           <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between gap-4">
             <Link href="/" className="text-lg font-semibold text-slate-900">
-              NestJs 15
+              NestJs 16
             </Link>
 
             <nav className="hidden md:flex items-center gap-6">
