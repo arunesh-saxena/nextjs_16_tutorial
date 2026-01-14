@@ -6,7 +6,8 @@ const ProductsDBPage = async () => {
     const products = await getProducts();
     return (
         <div>
-            <h1>Product Detail Page</h1>
+            <h1>Product Detail Page<
+                        /h1>
             <ProductDetail products={products} />
         </div>
     );
