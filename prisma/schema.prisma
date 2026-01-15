@@ -6,8 +6,11 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:app:dp"
+//  provider = "sqlite"
+//  url      = "file:app:dp"
+
+    provider = "postgresql" // or mysql
+    url      = env("DATABASE_URL")
 }
 
 model Product {
