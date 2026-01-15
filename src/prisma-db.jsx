@@ -1,6 +1,20 @@
 import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 
+
+const globalForPrisma = {
+    prisma: PrismaClient || undefined;
+};
+
+export const prisma =
+    globalForPrisma.prisma ??
+    new PrismaClient({
+        log: ["error"],
+    });
+
+if (process.env.NODE_ENV !== "production") {
+    globalForPrisma.prisma = prisma;
+}
 const seedProducts = async () => {
     console.log("Seeding products");
     const count = await prisma.product.count();
