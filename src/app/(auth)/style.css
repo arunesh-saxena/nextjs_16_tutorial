@@ -58,11 +58,6 @@
   white-space: nowrap;
 }
 
-/* ...existing code... */
-```/* filepath: d:\dev\nextjs_15_tutorial\src\app\(auth)\style.css */
-/* ...existing code... */
-
-/* Tabs styling */
 .tabs {
   display: flex;
   gap: 0.5rem;
@@ -116,5 +111,3 @@
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
-
-/* ...existing code... */
