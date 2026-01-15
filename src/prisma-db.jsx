@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const seedProducts = async () => {
-    console.log("Seeding products", globalForPrisma);
+    console.log("Seeding products");
     const count = await prisma.product.count();
     if (count === 0) {
         await prisma.product.createMany({

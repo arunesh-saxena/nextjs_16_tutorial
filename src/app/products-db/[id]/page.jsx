@@ -7,6 +7,7 @@ export default async function EditProductPage({
   params,
 }) {
   const { id } = await params;
+  console.log("EditProductPage id:", id);
   const product = await getProduct(parseInt(id));
 
   if (!product) {

@@ -8,6 +8,7 @@ import Form from "next/form";
 // import { revalidatePath } from "next/cache";
 
  const ProductDetail = ({ products }) => {
+  console.log("ProductDetail products:", products);
   const [optimisticProducts, setOptimisticProducts] = useOptimistic(
     products,
     (currentProducts, productId) => {
