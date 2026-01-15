@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 
 
 const globalForPrisma = {
-    prisma: PrismaClient || undefined;
+    prisma: PrismaClient || undefined
 };
 
 export const prisma =
@@ -16,7 +16,7 @@ if (process.env.NODE_ENV !== "production") {
     globalForPrisma.prisma = prisma;
 }
 const seedProducts = async () => {
-    console.log("Seeding products");
+    console.log("Seeding products", globalForPrisma);
     const count = await prisma.product.count();
     if (count === 0) {
         await prisma.product.createMany({
@@ -34,7 +34,7 @@ seedProducts();
 
 export async function getProducts(query) {
     // await seedProducts();
-    console.log("   getProducts");
+    console.log("   getProducts", globalForPrisma);
     await new Promise((resolve) => setTimeout(resolve, 1500));
     if (query) {
         return prisma.product.findMany({
