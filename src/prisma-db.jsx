@@ -2,19 +2,18 @@ import { PrismaClient } from "@prisma/client";
 // const prisma = new PrismaClient();
 
 
-const globalForPrisma = {
-    prisma: PrismaClient || undefined
-};
+const globalForPrisma = globalThis;
 
 export const prisma =
-    globalForPrisma.prisma ??
-    new PrismaClient({
-        log: ["error"],
-    });
+  globalForPrisma.prisma ??
+  new PrismaClient({
+    log: ["error"],
+  });
 
 if (process.env.NODE_ENV !== "production") {
-    globalForPrisma.prisma = prisma;
+  globalForPrisma.prisma = prisma;
 }
+
 const seedProducts = async () => {
     console.log("Seeding products", globalForPrisma);
     const count = await prisma.product.count();
@@ -34,7 +33,7 @@ seedProducts();
 
 export async function getProducts(query) {
     // await seedProducts();
-    console.log("   getProducts", globalForPrisma);
+    console.log("   getProducts");
     await new Promise((resolve) => setTimeout(resolve, 1500));
     if (query) {
         return prisma.product.findMany({
@@ -46,7 +45,7 @@ export async function getProducts(query) {
             },
         });
     }
-    return prisma.product.findMany();
+    return prisma.product?.findMany();
 }
 
 export async function getProduct(id) {
