@@ -4,7 +4,8 @@ import { useOptimistic } from "react";
 import { removeProduct } from "@/app/actions/products";
 import Link from "next/link";
 import Form from "next/form";
-import { revalidatePath } from "next/cache";
+/* todo: fix is for server build */
+// import { revalidatePath } from "next/cache";
 
  const ProductDetail = ({ products }) => {
   const [optimisticProducts, setOptimisticProducts] = useOptimistic(
