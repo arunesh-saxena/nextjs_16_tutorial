@@ -1,18 +1,4 @@
-import { PrismaClient } from "@prisma/client";
-// const prisma = new PrismaClient();
-
-
-const globalForPrisma = globalThis;
-
-export const prisma =
-  globalForPrisma.prisma ??
-  new PrismaClient({
-    log: ["error"],
-  });
-
-if (process.env.NODE_ENV !== "production") {
-  globalForPrisma.prisma = prisma;
-}
+import { prisma } from "@/lib/prisma";
 
 const seedProducts = async () => {
     console.log("Seeding products");
@@ -33,7 +19,7 @@ seedProducts();
 
 export async function getProducts(query) {
     // await seedProducts();
-    console.log("   getProducts");
+    console.log("getProducts");
     // await new Promise((resolve) => setTimeout(resolve, 1500));
     if (query) {
         return prisma.product.findMany({
@@ -49,7 +35,7 @@ export async function getProducts(query) {
 }
 
 export async function getProduct(id) {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // await new Promise((resolve) => setTimeout(resolve, 1500));
     return prisma.product.findUnique({
         where: { id },
     });
@@ -60,7 +46,7 @@ export async function addProduct(
     price,
     description
 ) {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // await new Promise((resolve) => setTimeout(resolve, 1500));
     return prisma.product.create({
         data: { title, price, description },
     });
@@ -72,7 +58,7 @@ export async function updateProduct(
     price,
     description
 ) {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // await new Promise((resolve) => setTimeout(resolve, 1500));
     return prisma.product.update({
         where: { id },
         data: { title, price, description },
@@ -80,7 +66,7 @@ export async function updateProduct(
 }
 
 export async function deleteProduct(id) {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    // await new Promise((resolve) => setTimeout(resolve, 1500));
     return prisma.product.delete({
         where: { id },
     });

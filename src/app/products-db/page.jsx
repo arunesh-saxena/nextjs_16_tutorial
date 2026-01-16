@@ -6,7 +6,7 @@ import ProductDetail from './product-details';
 
 const ProductsDBPage = async () => {
     const products = await getProducts();
-    console.log(111111)
+    console.log('ProductsDBPage');
     return (
         <div>
             <h1>Product Detail Page</h1>
